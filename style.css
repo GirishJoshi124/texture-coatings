@@ -19,7 +19,7 @@ body {
 
 /* HEADER */
 header {
-    padding: 25px 0;
+    padding: 25px 0 15px 0;
     text-align: center;
     background: rgba(255,255,255,0.7);
     backdrop-filter: blur(10px);
@@ -37,6 +37,34 @@ header h1 {
     color: #444;
 }
 
+/* TOP CONTACT BUTTONS */
+.top-buttons {
+    margin-top: 15px;
+}
+
+.btn-small {
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    margin: 5px;
+    display: inline-block;
+    font-size: 0.9rem;
+}
+
+.call-btn {
+    background: #2e7d32;
+}
+
+.email-btn {
+    background: #1565c0;
+}
+
+.btn-small:hover {
+    opacity: 0.85;
+}
+
 /* ANIMATIONS */
 .fade-in {
     opacity: 0;
@@ -49,16 +77,8 @@ header h1 {
     animation: slideUp 1.5s forwards;
 }
 
-@keyframes fadeIn {
-    to { opacity: 1; }
-}
-
-@keyframes slideUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+@keyframes fadeIn { to { opacity: 1; } }
+@keyframes slideUp { to { opacity: 1; transform: translateY(0); } }
 
 /* HERO SECTION */
 .hero {
@@ -86,11 +106,7 @@ header h1 {
     transform: translate(-50%, -50%);
 }
 
-.hero-content h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
+/* BUTTON MAIN */
 .btn {
     background: #e53935;
     padding: 12px 25px;
@@ -142,13 +158,6 @@ header h1 {
     box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
-/* ABOUT */
-.about {
-    text-align: center;
-    line-height: 1.7;
-    width: 80%;
-}
-
 /* CONTACT */
 .contact-box {
     background: rgba(255,255,255,0.6);
@@ -158,12 +167,36 @@ header h1 {
     max-width: 550px;
 }
 
-.glass {
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255,255,255,0.5);
+/* Bottom contact buttons */
+.bottom-buttons {
+    text-align: center;
+    margin-top: 20px;
 }
 
-/* FOOTER */
+/* FLOATING WHATSAPP BUTTON */
+.floating-whatsapp {
+    position: fixed;
+    bottom: 25px;
+    right: 20px;
+    background: #25D366;
+    width: 60px;
+    height: 60px;
+    color: white;
+    border-radius: 50%;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    z-index: 9999;
+    transition: 0.3s;
+}
+
+.floating-whatsapp:hover {
+    transform: scale(1.1);
+}
+
 footer {
     background: #222;
     color: white;
